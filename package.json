@@ -1,0 +1,29 @@
+{
+  "name": "prototype_hotel",
+  "version": "1.0.0",
+  "description": "index.js api-gateway.js hotel_types.js compressor.js hotel.thrift",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurzipta/prototype_hotel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurzipta/prototype_hotel/issues"
+  },
+  "homepage": "https://github.com/nurzipta/prototype_hotel#readme",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.6",
+    "redis": "^2.6.3",
+    "request": "^2.79.0",
+    "thrift": "^0.9.3",
+    "thrift-serializer": "^1.1.0"
+  }
+}
