@@ -55,6 +55,8 @@ var redis = require('redis'),
 var amqp = require('amqplib/callback_api');
 var request = require('request');
 var path = require('path');
+
+// var amqpUrl = 'amqp://tiket:tiket123@54.179.128.134:5672';
 // var amqpUrl = 'amqp://exvldeec:Bmy6Q-Nrnukol-Rz78bY6p6A4fPcUtTa@zebra.rmq.cloudamqp.com/exvldeec';
 var amqpUrl = 'amqp://localhost';
 // var urlAPI = 'http://api.devel.tiket.com/search/hotel';
@@ -72,8 +74,8 @@ var serializer = require('thrift-serializer')
 
 var from = Date.now();
 
-// var API_TOKEN = ''
-var API_TOKEN = '' // PROD
+// var API_TOKEN = '2d6f4f2237218762b138de326b7b8d591d15329e'
+var API_TOKEN = '38fd2908633a6e183d5a52ce2107cdfd8c3ba6fb' // PROD
 
 var param = {
 	startdate	: '2017-01-27',
