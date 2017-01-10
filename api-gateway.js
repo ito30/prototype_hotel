@@ -4,6 +4,7 @@ var app = express()
 var amqp = require('amqplib/callback_api');
 var path = require('path');
 
+// var amqpUrl = 'amqp://tiket:tiket123@54.179.128.134:5672';
 // var amqpUrl = 'amqp://exvldeec:Bmy6Q-Nrnukol-Rz78bY6p6A4fPcUtTa@zebra.rmq.cloudamqp.com/exvldeec';
 var amqpUrl = 'amqp://localhost';
 
