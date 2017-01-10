@@ -55,16 +55,11 @@ var redis = require('redis'),
 var amqp = require('amqplib/callback_api');
 var request = require('request');
 var path = require('path');
+
 // var amqpUrl = 'amqp://exvldeec:Bmy6Q-Nrnukol-Rz78bY6p6A4fPcUtTa@zebra.rmq.cloudamqp.com/exvldeec';
 var amqpUrl = 'amqp://localhost';
 // var urlAPI = 'http://api.devel.tiket.com/search/hotel';
 var urlAPI = 'http://api.tiket.com/search/hotel';
-
-var file_compressor = './compressor.js';
-
-var codec = {};
-codec.name = path.basename(file_compressor);
-codec.impl = require(file_compressor);
 
 var _Hotel = require('./gen-nodejs/hotel_prod_types').Hotel
 var SearchResult = require('./gen-nodejs/hotel_prod_types').SearchResult
