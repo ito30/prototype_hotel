@@ -25,7 +25,7 @@
   ```
 
 - Express.js
-- RabbitMQ
+- RabbitMQ with AMQP Protocol
 - MongoDB using [Mongoose](https://github.com/Automattic/mongoose)
 - [Node-redis](https://github.com/NodeRedis/node_redis)
 - [Apache Thrift](https://thrift.apache.org/)
