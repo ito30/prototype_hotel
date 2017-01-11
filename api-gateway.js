@@ -18,6 +18,9 @@ app.post('/bulk', function(req, res) {
 	res.send(req.body)
 })
 
+const cluster = require('cluster')
+const numCPUs = require('os').cpus().length
+
 amqp.connect(amqpUrl, function(err, conn) {
 	app.post('/hotel', function (req, res) {
 	  	var total_time = Date.now()
@@ -94,9 +97,29 @@ amqp.connect(amqpUrl, function(err, conn) {
 	});
 })
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!')
-})
+if (process.argv[2] == 'true') {
+	if (cluster.isMaster) {
+		console.log('Master ${process.pid} is running')
+		for (let i = 0; i < numCPUs; i++) {
+			cluster.fork();
+		}
+
+		cluster.on('exit', (worker, code, signal) => {
+			console.log(`worker ${worker.process.pid} died`);
+		});
+	} else {
+		app.listen(8080, function () {
+			// console.log('Example app listening on port 8080!')
+		})
+
+		console.log(`Worker ${process.pid} started`);
+	}
+} else {
+	app.listen(8080, function () {
+		console.log('Example app listening on port 8080!')
+	})
+}
+
 
 function publish(amqpUrl, ex, q, msg) {
 	amqp.connect(amqpUrl, function(err, conn) {
