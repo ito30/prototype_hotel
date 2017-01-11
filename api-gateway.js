@@ -76,11 +76,12 @@ amqp.connect(amqpUrl, function(err, conn) {
 			ch.publish('hotel_search__request', 'hotel_search__request', new Buffer(msg));
 			ch.close()
 			conn.createChannel(function(err, ch) {
+				var from = Date.now()
 				ch.consume('hotel_search__response', function(msg) {
-					console.log("Consume ", param.q)
+					logTime("Consume", from)
 
 					bytes = msg.content;
-					var from = Date.now()
+					from = Date.now()
 					serializer.read(SearchResult, bytes, function (err, msg) {
 						if (err) {
 							console.log(err)
