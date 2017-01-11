@@ -1,0 +1,28 @@
+{
+  "name": "prototype_hotel_1",
+  "version": "1.0.0",
+  "description": "**Hotel prototype phase 1 (with thrift)** is testing 1 flow search hotel",
+  "main": "index.js",
+  "dependencies": {
+    "amqplib": "^0.5.1",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "request": "^2.79.0",
+    "thrift-serializer": "^1.1.0",
+    "thrift": "^0.9.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ito30/prototype_hotel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ito30/prototype_hotel/issues"
+  },
+  "homepage": "https://github.com/ito30/prototype_hotel#readme"
+}
