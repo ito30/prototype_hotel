@@ -59,7 +59,7 @@ amqp.connect(amqpUrl, function(err, conn) {
 			        console.log(error);
 			    } else {
 
-			    	logTime('End API Call', from);
+			    	logTime('end API call', from);
 			    	
 			    	conn.createChannel(function(err, ch) {
 					    var ex = 'hotel_search__response';
@@ -80,15 +80,15 @@ amqp.connect(amqpUrl, function(err, conn) {
 
 					    		// console.log(codec.impl.decode(encoded))
 					    	})
-					    	logTime('Encoded ', from);
+					    	logTime('encode result', from);
 					    }
 
 					    // console.log(encodedData)
 
 					    from = Date.now();
 					    ch.publish(ex, q, new Buffer(JSON.stringify(encodedData)));
-					    logTime('Publish', from);
-
+					    logTime('publish result', from);
+                        console.log('----------------------------------------------------');
 				  	});
 			    }
 			});

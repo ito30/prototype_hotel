@@ -24,11 +24,11 @@ app.get('/hotel', function (req, res) {
   	amqp.connect(amqpUrl, function(err, conn) {
 		conn.createChannel(function(err, ch) {
 			var msg = JSON.stringify(param)
-			console.log(" [x] Sent %s", msg);
+			console.log("Sent request %s", msg);
 			ch.publish('hotel_search__request', 'hotel_search__request', new Buffer(msg));
 			ch.consume('hotel_search__response', function(msg) {
 
-				console.log("Consume ", param.q)
+				console.log("consume result : %s ", param.q)
 
 				msg = JSON.parse(msg.content);
 				var result = [];
@@ -41,11 +41,12 @@ app.get('/hotel', function (req, res) {
 						result.push( codec.impl.decode(v) );
 					})
 
-					console.log("Time decoded ", (Date.now() - start) + ' ms')
+					console.log("Time decode result : ", (Date.now() - start) + ' ms')
 					
 				}
 
-				console.log(Date.now() - from + ' ms')
+				console.log("Total time 1 flow : %s ", Date.now() - from + ' ms')
+				console.log("----------------------------------------------------------------");
 				conn.close();
 
 				res.send(result)
@@ -58,7 +59,7 @@ app.get('/hotel', function (req, res) {
 })
 
 app.listen(8080, function () {
-  console.log('Example app listening on port 8080!')
+  console.log('Api Gateway run on port 8080!')
 })
 
 function publish(amqpUrl, ex, q, msg) {
