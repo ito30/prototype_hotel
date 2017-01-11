@@ -40,8 +40,8 @@
 - [300 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1bFM1Vmt1TFdrX1E/view?usp=sharing)
 - MongoDB inquiry time consumption: `20 - 50++ ms`
 - Redis inquiry time consumption: `0 - 1ms`
-- RabbitMQ publishing time consumption: `0 - 3ms`
-- RabbitMQ consuming time consumption: `0 - 3ms`
+- RabbitMQ publishing time consumption: `0 - 3 ms`
+- RabbitMQ consuming time consumption: `0 - 3 ms`
 - Thrift encoding time consumption
   - on startup: up to `20++ ms`
   - after cached: `1 - 7 ms`
