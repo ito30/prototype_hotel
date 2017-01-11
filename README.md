@@ -12,6 +12,8 @@
 - RabbitMQ
 - Apache thrift
 
+# File used
+
 - api-gateway.js
 - index.js (hotel microservice)
 - hotel.thrift
