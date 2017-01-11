@@ -1,13 +1,15 @@
-# prototype_hotel
+# Hotel Microservice Prototyping 2
+
+## Main files
 - api-gateway.js
 - hotel-service.js
 - hotel_prod.thrift
 
-# How to generate thrift model
+## How to generate thrift model
 - install Apache Thrift
 - run: ```thrift --gen js:node hotel_prod.thrift```
 
-# Technology stack
+## Technology stack
 - Node.js
 
   ```javascript
@@ -29,11 +31,11 @@
 - [Apache Thrift](https://thrift.apache.org/)
 - [Thrift-serializer](https://github.com/guardian/thrift-serializer). Can't find better library for Thrift Serializer, or maybe we can make our own?
 
-# PC Specification for Test
+## PC Specification for Test
 - Intel Core i5
 - Memory 8GB
 
-# Test
+## Test
 - [100 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1ZlJTMmgyUFFUNVk/view?usp=sharing)
 - [300 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1bFM1Vmt1TFdrX1E/view?usp=sharing)
 - MongoDB inquiry time consumption: `20 - 50++ ms`
@@ -46,5 +48,8 @@
 - Thrift decoding time consumption
   - on startup: up to `20++ ms`
   - after cached: `1 - 9 ms`
+- Total request & response time consumption
+  - Local environment: `25 - 1000++ ms` (lookup [300 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1bFM1Vmt1TFdrX1E/view?usp=sharing))
+  - AWS environment: `400 - 3000++ ms`
 
 
