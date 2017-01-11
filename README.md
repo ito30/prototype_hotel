@@ -53,4 +53,15 @@
   - Local environment: `25 - 1000++ ms` (lookup [300 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1bFM1Vmt1TFdrX1E/view?usp=sharing))
   - AWS environment: `400 - 3000++ ms`
 
+## Brief stats of Gatling (lookup [300 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1bFM1Vmt1TFdrX1E/view?usp=sharing))
+- General Statistic
+![General Statistic](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_2/benchmark/general-statistic.png)
+- Request Per Second
+![Request Per Second](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_2/benchmark/300-request-per-second.png)
+- Response Per Second
+![Response Per Second](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_2/benchmark/300-response-per-second.png)
+- Response Time
+![Response Time](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_2/benchmark/response-time.png)
+  
+
 
