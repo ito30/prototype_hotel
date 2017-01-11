@@ -32,8 +32,9 @@
 - [Thrift-serializer](https://github.com/guardian/thrift-serializer). Can't find better library for Thrift Serializer, or maybe we can make our own?
 
 ## PC Specification for Test
-- Intel Core i5
-- Memory 8GB
+- Ubuntu 16.04 x64
+- 4CPU
+- 8GB RAM
 
 ## Test
 - [100 req per second](https://drive.google.com/a/tiket.com/file/d/0Bw3WJ0HMd0k1ZlJTMmgyUFFUNVk/view?usp=sharing)
