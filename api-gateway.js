@@ -1,16 +1,13 @@
 var express = require('express')
 var app = express()
 var amqp = require('amqplib/callback_api');
-var path = require('path');
 
 // var amqpUrl = 'amqp://exvldeec:Bmy6Q-Nrnukol-Rz78bY6p6A4fPcUtTa@zebra.rmq.cloudamqp.com/exvldeec';
 var amqpUrl = 'amqp://localhost';
 
 var file_compressor = './compressor.js';
 
-var codec = {};
-codec.name = path.basename(file_compressor);
-codec.impl = require(file_compressor);
+var serializer = require(file_compressor);
 
 app.get('/hotel', function (req, res) {
   	var from = Date.now()
@@ -38,7 +35,7 @@ app.get('/hotel', function (req, res) {
 				{
 					msg.forEach(function(v){
 						v = new Buffer(v);
-						result.push( codec.impl.decode(v) );
+						result.push( serializer.decode(v) );
 					})
 
 					console.log("Time decode result : ", (Date.now() - start) + ' ms')

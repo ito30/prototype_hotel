@@ -2,16 +2,14 @@
 
 var amqp = require('amqplib/callback_api');
 var request = require('request');
-var path = require('path');
+
 // var amqpUrl = 'amqp://exvldeec:Bmy6Q-Nrnukol-Rz78bY6p6A4fPcUtTa@zebra.rmq.cloudamqp.com/exvldeec';
 var amqpUrl = 'amqp://localhost';
 var urlAPI = 'http://api.tiket.com/search/hotel';
 
 var file_compressor = './compressor.js';
 
-var codec = {};
-codec.name = path.basename(file_compressor);
-codec.impl = require(file_compressor);
+var serializer = require(file_compressor);
 
 var param = {
 	startdate	: '2017-01-27',
@@ -75,10 +73,9 @@ amqp.connect(amqpUrl, function(err, conn) {
 					    	from = Date.now();
 					    	res.forEach(function(v){
 					    		// console.log(v)
-					    		var encoded = codec.impl.encode(v);
+					    		var encoded = serializer.encode(v);
 					    		encodedData.push( encoded );
 
-					    		// console.log(codec.impl.decode(encoded))
 					    	})
 					    	logTime('encode result', from);
 					    }
