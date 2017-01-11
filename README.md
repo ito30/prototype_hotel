@@ -6,7 +6,7 @@
 - hotel_prod.thrift
 
 ## How to generate thrift model
-- install Apache Thrift
+- install [Apache Thrift](https://thrift.apache.org/)
 - run: ```thrift --gen js:node hotel_prod.thrift```
 
 ## Technology stack
