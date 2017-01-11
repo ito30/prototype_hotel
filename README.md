@@ -26,4 +26,4 @@
 
 ## Testing & Benchmark
 
-![Image of Testing](https://github.com/ito30/prototype_hotel/blob/prototype_1/testing.png)
+![Image of Testing](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_1/testing.png)
