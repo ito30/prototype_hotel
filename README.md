@@ -39,10 +39,12 @@
 | 2 | Bali | 2653 | 3 | 24 | 2793 |
 | 3 | Bali | 2673 | 3 | 3 | 2780 |
 | 4 | Yogyakarta | 1639 | 15 | 9 | 1780 |
-| 5 | Yogyakarta |||||
-| 6 | Yogyakarta |||||
-| 7 | Singapura |||||
-| 8 | Singapura |||||
-| 9 | Singapura |||||
+| 5 | Yogyakarta | 652 | 3 | 3 | 771 |
+| 6 | Yogyakarta | 485 | 5 | 0.1 | 590 |
+| 7 | Singapura | 3703 | 16 | 17 | 3801 |
+| 8 | Singapura | 706 | 2 | 2 | 774 |
+| 9 | Singapura | 962 | 4 | 2 | 1046 |
+
+** Schreenshot **
 
 ![Image of Testing](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_1/testing.png)
