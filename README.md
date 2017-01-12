@@ -45,6 +45,6 @@
 | 8 | Singapura | 706 | 2 | 2 | 774 |
 | 9 | Singapura | 962 | 4 | 2 | 1046 |
 
-** Schreenshot **
+**Schreenshot**
 
 ![Image of Testing](https://raw.githubusercontent.com/ito30/prototype_hotel/prototype_1/testing.png)
