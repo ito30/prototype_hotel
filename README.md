@@ -7,7 +7,6 @@
 - Nodejs
 	- express
 	- request
-	- path
 	- amqplib
 - RabbitMQ
 - Apache thrift
